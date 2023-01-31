@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>My Webstore</title>
+<%= stylesheet_link_tag "main" %>
+</head>
+<body>
+<h1> Hello world!</h1>
+<p> Written by <i><%= @name %></i> </p>
+
+<table>
+    <tbody>
+        <% @cats.each do |cat| %>
+        <tr>
+            <td><%= cat[:name] %></td>
+            <td><%= cat[:weight] %></td>
+            <td><%= cat[:color] %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<% if @cats.length > 3 %>
+<h2>Wow! That's a lot of cats!</h2>
+<% end %>
+
+</ol>
+<img src="/assets/images/ascii_chart.png">
+<%= image_tag "ascii_chart.png" %>
+<%= link_to "Visit my about page!", "/about"%>
+</body>
+</html>
